@@ -11,12 +11,13 @@ var m_y;
 window.addEventListener('mousemove', function(event){
     m_x = event.x;
     m_y = event.y;
-    circle(m_x, m_y, 10);
+    // circle(m_x, m_y, 10);
     console.log(m_x, m_y);
 });
 
-function circle(x, y, r) {
+function circle(x, y, r, color) {
 c.beginPath()
+c.fillStyle = color? color : "black"
 c.arc(x, y, r, 0, Math.PI * 2, false)
 c.fill()
 }
